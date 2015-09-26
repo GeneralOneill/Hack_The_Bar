@@ -1,24 +1,46 @@
-<!--
-  ~ Copyright (c) 2015-present, Parse, LLC.
-  ~ All rights reserved.
-  ~
-  ~ This source code is licensed under the BSD-style license found in the
-  ~ LICENSE file in the root directory of this source tree. An additional grant
-  ~ of patent rights can be found in the PATENTS file in the same directory.
-  -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity">
+<!-- Login Form -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip">
+    <!--  Email Label -->
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#372c24"
+        android:text="Email"/>
+    <EditText android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="20dip"
+        android:singleLine="true"/>
+    <!--  Password Label -->
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#372c24"
+        android:text="Password"/>
+    <EditText android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:singleLine="true"
+        android:password="true"/>
+    <!-- Login button -->
+    <Button android:id="@+id/btnLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="Login"/>
+    <!-- Link to Registration Screen -->
+    <TextView android:id="@+id/link_to_register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:layout_marginBottom="40dip"
+        android:text="New to BarToBar? Register here"
+        android:gravity="center"
+        android:textSize="20dip"
+        android:textColor="#0b84aa" />
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-</RelativeLayout>
+</LinearLayout>
+    <!-- Login Form Ends -->
