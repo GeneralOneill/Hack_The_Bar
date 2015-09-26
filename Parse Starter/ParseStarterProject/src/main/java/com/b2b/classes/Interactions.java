@@ -5,25 +5,42 @@ package com.b2b.classes;
  */
 public class Interactions
 {
-    public Drink drink;
-    public User user;
-    public String timestamp;
-    public Bar bar;
-    public String bartender;
-    public double pointValue;
+    private Drink drink;
+    private User user;
+    private String timestamp;
+    private Bar bar;
+    private String bartender;
 
-    public Interactions(Drink myDrink, String myTimestamp, Bar myBar, String myBartender) {
+    public Interactions(Drink myDrink, String myTimestamp, Bar myBar, String myBartender, User iUser)
+    {
         drink = myDrink;
         timestamp = myTimestamp;
         bar = myBar;
+        user = iUser;
         bartender = myBartender;
-        pointValue = Drink.price;
     }
-
-    public void updatePoints(double price, double points)
+    public Drink getDrink()
     {
-        User.points+= Drink.price;
+        return drink;
     }
 
+    public String getTimestamp()
+    {
+        return timestamp;
+    }
 
+    public Bar getBar()
+    {
+        return bar;
+    }
+
+    public String getBartender()
+    {
+        return bartender;
+    }
+
+    public User getUser()
+    {
+        return user;
+    }
 }
