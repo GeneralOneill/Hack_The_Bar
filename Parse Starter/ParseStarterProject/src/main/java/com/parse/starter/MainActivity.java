@@ -9,25 +9,25 @@
 package com.parse.starter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 
 import com.parse.ParseAnalytics;
-import com.parse.ParseObject;
 
 
 public class MainActivity extends Activity {
 
-  @Override
+  private final String USER_DATA_FILE = "b2b.txt";
+
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    ParseObject testObject = new ParseObject("TestObject");
-    testObject.put("foo", "bar");
-    testObject.saveInBackground();
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
+  }
+
+  public void GoToRegistration(View view) {
+    Intent intent = new Intent(this, RegistrationActivity.class)
   }
 }
