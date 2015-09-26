@@ -5,18 +5,17 @@ package com.b2b.classes;
  */
 public class Drink
 {
-    public static String type;
-    public static double pointValue;
-    public static String name;
-    public static double price;
+    private String type;
+    private String name;
+    private double price;
 
-    public Drink(String myType, double myPointValue, String myName, double myPrice) {
+    public Drink(String myType, String myName, double myPrice) {
         type = myType;
-        pointValue = myPointValue;
         name = myName;
         price = myPrice;
     }
 
-
-
+    public String getType(){return type;}
+    public String getName(){return name;}
+    public double getPrice(){return price;}
 }

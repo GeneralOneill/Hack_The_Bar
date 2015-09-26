@@ -3,17 +3,18 @@ package com.b2b.classes;
 /**
  * Created by devashrinagarkar on 9/26/15.
  */
-public class User
+public class Bar
 {
     private double points;
     private String email;
-    private String full_name;
+    private String barName;
     private String password;
+    private int id;
 
-    public User(String myEmail, String fullName, String myPass)
+    public Bar(String myEmail, String myBarName, String myPass)
     {
         email= myEmail;
-        full_name = fullName;
+        barName= myBarName;
         password= myPass;
         points=0;
     }
@@ -33,7 +34,11 @@ public class User
         return points;
     }
 
-    public String getFullName(){return full_name;}
+
+    public String getBarName()
+    {
+        return barName;
+    }
 
     public void addPoints(int addAmount)
     {
