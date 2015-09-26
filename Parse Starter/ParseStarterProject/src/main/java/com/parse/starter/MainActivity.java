@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.parse.ParseAnalytics;
 
@@ -24,10 +25,15 @@ public class MainActivity extends Activity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    TextView register = (TextView)this.findViewById(R.id.link_to_register);
+    register.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(v.getContext(), RegistrationActivity.class);
+        v.getContext().startActivity(intent);
+      }
+    });
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
 
-  public void GoToRegistration(View view) {
-    Intent intent = new Intent(this, RegistrationActivity.class)
-  }
 }

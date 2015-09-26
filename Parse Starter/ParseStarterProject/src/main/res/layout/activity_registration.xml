@@ -25,8 +25,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="119dp"
-            android:layout_gravity="left|center_vertical"
-            android:onClick="RegisterCustomer"/>
+            android:layout_gravity="left|center_vertical" />
 
         <TextView
             android:layout_width="wrap_content"

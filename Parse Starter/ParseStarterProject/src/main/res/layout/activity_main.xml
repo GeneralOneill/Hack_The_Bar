@@ -4,8 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dip"
-    android:layout_below="@id/header">
+    android:padding="10dip">
     <!--  Email Label -->
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -41,8 +40,7 @@
         android:text="New to BarToBar? Register here"
         android:gravity="center"
         android:textSize="20dip"
-        android:textColor="#0b84aa"
-        android:onClick="GoToRegistration"/>
+        android:textColor="#0b84aa" />
 
 </LinearLayout>
     <!-- Login Form Ends -->
