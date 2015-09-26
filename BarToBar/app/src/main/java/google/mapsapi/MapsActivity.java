@@ -33,13 +33,6 @@ public class MapsActivity extends FragmentActivity implements GoogleApiClient.Co
                 .addApi(LocationServices.API)
                 .build();
         mGoogleApiClient.connect();
-
-        Parse.enableLocalDatastore(this);
-
-        Parse.initialize(this, "yI1bjVW9NGCkUzDoX7NNQy4b84pDj89TemvBVkNp", "lhrWMIQD6BWZLIaWkLXN7kefD44zn0qSnVkqrENQ");
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
     }
 
 
