@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.b2b.classes;
 
 /**
  * Created by devashrinagarkar on 9/26/15.
