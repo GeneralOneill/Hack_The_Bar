@@ -8,7 +8,7 @@
   ~ of patent rights can be found in the PATENTS file in the same directory.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.parse.starter" package="net.yancyparedes.googlemapsproject">
+    package="com.parse.starter, net.yancyparedes.googlemapsproject">
 
 
     <!-- Parse-->
