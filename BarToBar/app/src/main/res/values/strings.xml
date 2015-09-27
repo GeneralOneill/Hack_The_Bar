@@ -8,4 +8,6 @@
     <string name="title_activity_registration">RegistrationActivity</string>
     <string name="title_activity_register_customer">RegisterCustomer</string>
     <string name="title_activity_landing">LandingActivity</string>
+    <string name="title_activity_register_bar">RegisterBar</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
 </resources>

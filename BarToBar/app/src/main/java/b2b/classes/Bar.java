@@ -8,10 +8,12 @@ public class Bar {
     private String email;
     private String barName;
     private String password;
+    private String address;
     private int id;
 
-    public Bar(String myEmail, String myBarName, String myPass)
+    public Bar(String myEmail, String myBarName, String myPass, String newAddress)
     {
+        address = newAddress;
         email= myEmail;
         barName= myBarName;
         password= myPass;
@@ -27,18 +29,15 @@ public class Bar {
     {
         return password;
     }
-
     public double getPoints()
     {
         return points;
     }
-
-
     public String getBarName()
     {
         return barName;
     }
-
+    public String getAddress(){return address;}
     public void addPoints(int points1)
     {
         points+= points1;

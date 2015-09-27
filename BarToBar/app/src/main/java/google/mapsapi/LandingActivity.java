@@ -17,7 +17,7 @@ public class LandingActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
-        String [] values = new String[]{"User Profile", "History", "Coupon Page"};
+        String [] values = new String[]{"User Profile", "History", "Coupon Page", "Map Location"};
         ArrayAdapter<String> adapter;
         adapter = new ArrayAdapter<String>(this,
                 R.layout.row_layout, R.id.label, values);
