@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,14 +37,16 @@ public class RegisterBar extends Activity {
                 barUser.setEmail(barEmail);
                 barUser.put("Address", barAddress);
                 barUser.put("Type", "Bar");
-                barUser.put("Bar Name", barName);
+                barUser.put("BarName", barName);
                 barUser.put("Points", 0);
                 barUser.signUpInBackground(new SignUpCallback() {
                     @Override
                     public void done(ParseException e) {
                         if (e == null) {
-                            Intent intent = new Intent(v.getContext(), LandingActivity.class);
-                            v.getContext().startActivity(intent);
+                            IntentHandler.GoToActivity(v, LandingActivity.class);
+                        }
+                        else {
+                            Log.d("Error", e.getMessage());
                         }
                     }
                 });
