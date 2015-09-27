@@ -9,7 +9,7 @@
         android:layout_height="wrap_content" >
 
         <!--  Header  Starts-->
-        <LinearLayout android:id="@+id/header"
+        <LinearLayout android:id="@+id/header_send_drinks"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingTop="5dip"
@@ -27,13 +27,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dip"
-            android:layout_below="@id/header">
+            android:layout_below="@id/header_send_drinks">
             <!-- Full Name Label -->
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="Full Name"/>
-            <EditText android:id="@+id/reg_fullname"
+                android:text="Customer's Email"/>
+            <EditText android:id="@+id/cust_email_sd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:layout_marginBottom="20dip"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Bartender"/>
+            <EditText android:id="@+id/bartender_sd"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
@@ -43,8 +53,8 @@
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="Email"/>
-            <EditText android:id="@+id/reg_email"
+                android:text="Bar's Email"/>
+            <EditText android:id="@+id/bar_email_sd"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
@@ -54,18 +64,17 @@
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:text="Password"/>
-            <EditText android:id="@+id/reg_password"
+                android:text="Drink"/>
+            <EditText android:id="@+id/drink_name_sd"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:password="true"
                 android:singleLine="true"
                 android:layout_marginTop="5dip"/>
             <!-- Register Button -->
             <Button
-                android:id="@+id/reg_cust_btn"
+                android:id="@+id/sell_drink_sd"
 
-                android:text="REGISTER NEW CUSTOMER"
+                android:text="SOLD DRINK"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:layout_width="300dp"
