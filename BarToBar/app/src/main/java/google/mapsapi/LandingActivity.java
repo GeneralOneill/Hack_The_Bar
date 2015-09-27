@@ -23,20 +23,20 @@ public class LandingActivity extends Activity {
         setContentView(R.layout.activity_landing);
         ParseUser currentUser = ParseUser.getCurrentUser();
         String [] values;
-        if(currentUser!=null){
-            if(currentUser.get("Type").equals("Customer")){
+        if (currentUser!=null) {
+            if (currentUser.get("Type").equals("Customer")) {
                 values = new String[]{"User Profile", "History", "Coupon Page", "Map Location", "Log Out"};
             }
-            else if(currentUser.get("Type").equals("Bar")){
+            else if (currentUser.get("Type").equals("Bar")) {
                 values=new String[]{"Bar Profile", "History", "Log out"};
             }
-            else{
+            else {
                 values = new String[0];
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
             }
         }
-        else{
+        else {
             values = new String[0];
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
@@ -52,12 +52,12 @@ public class LandingActivity extends Activity {
                 System.out.println(position);
                 String item = (String)parent.getAdapter().getItem(position);
                 System.out.println(item);
-                if (item.equals("Log Out")){
+                if (item.equals("Log Out")) {
                     ParseUser.logOut();
                     Intent intent = new Intent(view.getContext(), LoginActivity.class);
                     startActivity(intent);
                 }
-                if(item.equals("User Profile")){
+                if (item.equals("User Profile")) {
                     Intent intent= new Intent(view.getContext(), UserProfileActivity.class);
                     startActivity(intent);
                 }
