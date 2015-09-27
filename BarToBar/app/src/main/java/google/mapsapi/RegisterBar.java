@@ -22,7 +22,7 @@ public class RegisterBar extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_bar);
 
-        Button registerBar = (Button)findViewById(R.id.btn_bar_register);
+        Button registerBar = (Button)findViewById(R.id.reg_bar_btn);
         registerBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {

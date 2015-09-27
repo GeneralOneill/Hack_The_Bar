@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="TextAppearance.Large">
-        <item name="android:textSize">22sp</item>
-    </style>
 
-    <style name="TextAppearance.Medium">
-        <item name="android:textSize">18sp</item>
-    </style>
-
-    <style name="TextAppearance.Small">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">?textColorSecondary</item>
-    </style>
 
 </resources>
