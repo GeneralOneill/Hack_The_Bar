@@ -11,6 +11,10 @@
         android:protectionLevel="signature"/>
     <uses-permission android:name="com.b2b.permission.MAPS_RECEIVE"/>
 
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="23" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -31,9 +35,16 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+<<<<<<< HEAD
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true"/>
+=======
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+>>>>>>> ad0e695edc9722a809736d58959b0b0c12d82413
 
     <application
         android:name=".App"
@@ -80,6 +91,26 @@
         <activity
             android:name=".UserProfileActivity"
             android:label="@string/title_activity_user_profile" >
+        </activity>
+        <activity
+            android:name=".WebMapsActivity"
+            android:label="@string/title_activity_web_maps" >
+        </activity>
+        <activity
+            android:name=".SendingDrinksActivity"
+            android:label="@string/title_activity_sending_drinks" >
+        </activity>
+        <activity
+            android:name=".CreateDrinksActivity"
+            android:label="@string/title_activity_create_drinks" >
+        </activity>
+        <activity
+            android:name=".DrinkListActivity"
+            android:label="@string/title_activity_drink_list" >
+        </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/title_activity_history" >
         </activity>
     </application>
 

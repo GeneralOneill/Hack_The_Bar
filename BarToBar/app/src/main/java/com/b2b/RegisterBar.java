@@ -3,6 +3,12 @@ package com.b2b;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD:BarToBar/app/src/main/java/com/b2b/RegisterBar.java
+=======
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+>>>>>>> ad0e695edc9722a809736d58959b0b0c12d82413:BarToBar/app/src/main/java/google/mapsapi/RegisterBar.java
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,14 +39,16 @@ public class RegisterBar extends Activity {
                 barUser.setEmail(barEmail);
                 barUser.put("Address", barAddress);
                 barUser.put("Type", "Bar");
-                barUser.put("Bar Name", barName);
+                barUser.put("BarName", barName);
                 barUser.put("Points", 0);
                 barUser.signUpInBackground(new SignUpCallback() {
                     @Override
                     public void done(ParseException e) {
                         if (e == null) {
-                            Intent intent = new Intent(v.getContext(), LandingActivity.class);
-                            v.getContext().startActivity(intent);
+                            IntentHandler.GoToActivity(v, LandingActivity.class);
+                        }
+                        else {
+                            Log.d("Error", e.getMessage());
                         }
                     }
                 });
