@@ -51,7 +51,7 @@ public class MapsActivity extends FragmentActivity implements GoogleApiClient.Co
                 // Try to obtain the map from the SupportMapFragment.
                 mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
                         .getMap();
-        }
+            }
 
             Log.d("Latitude", String.valueOf(latitude));
             Log.d("Longitude", String.valueOf(longitude));
