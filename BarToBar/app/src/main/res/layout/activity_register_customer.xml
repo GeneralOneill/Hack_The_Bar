@@ -62,14 +62,15 @@
                 android:layout_marginTop="5dip"/>
             <!-- Register Button -->
             <Button
-                android:id="@+id/angry_btn"
+                android:id="@+id/reg_cust_btn"
 
-                android:text="Register New Customer"
+                android:text="REGISTER NEW CUSTOMER"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:layout_width="250dp"
+                android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:background="@drawable/buttonshape"
+                android:layout_marginTop="50px"
                 android:shadowColor="#A8A8A8"
                 android:shadowDx="0"
                 android:shadowDy="0"
