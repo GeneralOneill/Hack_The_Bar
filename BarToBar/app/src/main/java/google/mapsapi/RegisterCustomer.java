@@ -34,6 +34,7 @@ public class RegisterCustomer extends Activity {
                 user.put("Email", email);
                 user.put("Password", password);
                 user.saveInBackground();
+                v.getContext().startActivity(intent);
             }
         });
     }
