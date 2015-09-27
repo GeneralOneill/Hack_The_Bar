@@ -73,11 +73,21 @@
                 android:singleLine="true"
                 android:layout_marginTop="5dip"/>
             <!-- Register Button -->
-            <Button android:id="@+id/btn_bar_register"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:text="Register New Bar"/>
+
+            <Button
+                android:id="@+id/angry_btn"
+
+                android:text="Register New Bar"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:layout_gravity="center_horizontal|bottom"/>
         </LinearLayout>
         <!-- Registration Form Ends -->
     </RelativeLayout>
