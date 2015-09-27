@@ -1,6 +1,7 @@
 package google.mapsapi;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,13 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
+import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.List;
 
@@ -34,17 +38,16 @@ public class LoginActivity extends Activity {
             public void onClick(final View v) {
                 String email = ((EditText) findViewById(R.id.login_email)).getText().toString();
                 String password = ((EditText) findViewById(R.id.login_password)).getText().toString();
-                ParseQuery<ParseObject> query = ParseQuery.getQuery("User");
-                query.whereEqualTo("Email", email);
-                query.whereEqualTo("Password", password);
-                query.findInBackground(new FindCallback<ParseObject>() {
+                ParseUser.logInInBackground(email, password, new LogInCallback() {
                     @Override
-                    public void done(List<ParseObject> list, ParseException e) {
-                        if (e == null) {
+                    public void done(ParseUser user, ParseException e) {
+                        if (user != null) {
                             Intent intent = new Intent(v.getContext(), LandingActivity.class);
                             v.getContext().startActivity(intent);
                         } else {
-                            Log.d("Logging In", "Error: " +e.getMessage().toString());
+                            Toast.makeText(v.getContext(), "Incorrect email or password", Toast.LENGTH_SHORT).show();
+                            ((EditText)findViewById(R.id.login_email)).setText("");
+                            ((EditText)findViewById(R.id.login_password)).setText("");
                         }
                     }
                 });

@@ -16,6 +16,12 @@ public class User {
         password= myPass;
         points=0;
     }
+    public User(String fullName, String myEmail, String myPass, int numPoints){
+        email= myEmail;
+        full_name = fullName;
+        password= myPass;
+        points=numPoints;
+    }
 
     public String getEmail()
     {
