@@ -48,8 +48,19 @@ public class LandingActivity extends Activity {
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
                 System.out.println(position);
+                String item = (String)parent.getAdapter().getItem(position);
+                System.out.println(item);
+                if (item.equals("Log Out")){
+                    ParseUser.logOut();
+                    Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                    startActivity(intent);
+                }
+                if(item.equals("User Profile")){
+                    Intent intent= new Intent(view.getContext(), UserProfileActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }

@@ -31,7 +31,10 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        if(ParseUser.getCurrentUser()!= null){
+            Intent intent = new Intent(this, LandingActivity.class);
+            startActivity(intent);
+        }
         Button loginButton = (Button)findViewById(R.id.btnLogin);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,8 +49,8 @@ public class LoginActivity extends Activity {
                             v.getContext().startActivity(intent);
                         } else {
                             Toast.makeText(v.getContext(), "Incorrect email or password", Toast.LENGTH_SHORT).show();
-                            ((EditText)findViewById(R.id.login_email)).setText("");
-                            ((EditText)findViewById(R.id.login_password)).setText("");
+                            ((EditText) findViewById(R.id.login_email)).setText("");
+                            ((EditText) findViewById(R.id.login_password)).setText("");
                         }
                     }
                 });

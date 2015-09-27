@@ -37,7 +37,7 @@ public class RegisterCustomer extends Activity {
                 user.setEmail(email);
                 user.setPassword(password);
                 user.put("Points", 0);
-                user.put("Full Name", name);
+                user.put("FullName", name);
                 user.put("Type", "Customer");
                 user.signUpInBackground(new SignUpCallback() {
                     @Override
