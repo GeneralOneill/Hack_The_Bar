@@ -13,4 +13,8 @@
         android:id="@+id/label"
         android:textSize="60px" />
 
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"></FrameLayout>
+
 </LinearLayout>
