@@ -4,17 +4,18 @@ package b2b.classes;
  * Created by root on 9/26/15.
  */
 public class Drink {
-    private String type;
     private String name;
     private double price;
+    private Bar bar;
 
-    public Drink(String myType, double myPointValue, String myName, double myPrice) {
-        type = myType;
+    public Drink(String myName, double myPrice, Bar newBar) {
         name = myName;
         price = myPrice;
+        bar = newBar;
+
     }
 
-    public String getType(){return type;}
+    public Bar getBar(){return bar;}
     public String getName(){return name;}
     public double getPrice(){return price;}
 }
