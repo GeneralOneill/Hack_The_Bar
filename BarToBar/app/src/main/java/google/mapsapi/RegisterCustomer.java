@@ -24,7 +24,7 @@ public class RegisterCustomer extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_customer);
-        Button register = (Button)findViewById(R.id.btnRegister);
+        Button register = (Button)findViewById(R.id.reg_cust_btn);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
