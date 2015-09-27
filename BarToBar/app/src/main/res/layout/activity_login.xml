@@ -4,6 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
     android:padding="10dip">
     <!--  Email Label -->
     <TextView android:layout_width="fill_parent"
@@ -32,16 +34,17 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:text="Login"
+        android:text="LOGIN"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
+        android:layout_marginTop="60px"
         android:layout_gravity="center" />
 
 
