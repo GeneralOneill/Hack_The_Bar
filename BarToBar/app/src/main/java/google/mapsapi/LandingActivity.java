@@ -58,6 +58,7 @@ public class LandingActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 System.out.println(position);
                 String item = (String) parent.getAdapter().getItem(position);
 =======
@@ -79,6 +80,11 @@ public class LandingActivity extends Activity {
                 if(item.equals("Map Location")){
                     IntentHandler.GoToActivity(view, WebMapsActivity.class);
                 }
+=======
+
+                String item = (String)parent.getAdapter().getItem(position);
+
+>>>>>>> 526afb6... Fixed
                 switch(item){
                     case "Log Out": ParseUser.logOut();
                         IntentHandler.GoToActivity(view, LoginActivity.class);
@@ -102,11 +108,15 @@ public class LandingActivity extends Activity {
                         break;
                     default:
                         break;
+<<<<<<< HEAD
 =======
                 if (item.equals("User Profile")) {
                     Intent intent = new Intent(view.getContext(), UserProfileActivity.class);
                     startActivity(intent);
 >>>>>>> aee5f4a77b408a245dcb121ecc0282e9fa379e87
+=======
+
+>>>>>>> 526afb6... Fixed
                 }
 
             }
