@@ -10,4 +10,8 @@
     <string name="title_activity_landing">LandingActivity</string>
     <string name="title_activity_register_bar">RegisterBar</string>
     <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="title_activity_web_maps">WebMapsActivity</string>
+    <string name="title_activity_sending_drinks">SendingDrinksActivity</string>
+    <string name="title_activity_create_drinks">CreateDrinksActivity</string>
+    <string name="title_activity_drink_list">DrinkListActivity</string>
 </resources>

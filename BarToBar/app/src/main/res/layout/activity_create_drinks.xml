@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!--  Header  Starts-->
+        <LinearLayout android:id="@+id/header_create_drinks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip">
+        </LinearLayout>
+        <!--  Header Ends -->
+        <!-- Footer Start -->
+
+
+        <!-- Registration Form -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:layout_below="@id/header_create_drinks">
+            <!-- Full Name Label -->
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Drink Name"/>
+            <EditText android:id="@+id/drink_name_cd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:layout_marginBottom="20dip"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Bar Email"/>
+
+            <EditText android:id="@+id/bar_email_cd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:layout_marginBottom="20dip"/>
+            <!--  Email Label -->
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Price"/>
+            <EditText android:id="@+id/drink_price_cd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:layout_marginBottom="20dip"/>
+
+            <Button
+                android:id="@+id/make_drink_cd"
+
+                android:text="CREATE DRINK"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/buttonshape"
+                android:layout_marginTop="50px"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:layout_gravity="center_horizontal|bottom"/>
+        </LinearLayout>
+        <!-- Registration Form Ends -->
+    </RelativeLayout>
+</ScrollView>

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="google.mapsapi" >
 
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="23" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -22,7 +26,8 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="23" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -69,6 +74,22 @@
         <activity
             android:name=".UserProfileActivity"
             android:label="@string/title_activity_user_profile" >
+        </activity>
+        <activity
+            android:name=".WebMapsActivity"
+            android:label="@string/title_activity_web_maps" >
+        </activity>
+        <activity
+            android:name=".SendingDrinksActivity"
+            android:label="@string/title_activity_sending_drinks" >
+        </activity>
+        <activity
+            android:name=".CreateDrinksActivity"
+            android:label="@string/title_activity_create_drinks" >
+        </activity>
+        <activity
+            android:name=".DrinkListActivity"
+            android:label="@string/title_activity_drink_list" >
         </activity>
     </application>
 

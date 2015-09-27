@@ -23,23 +23,19 @@ public class LandingActivity extends Activity {
         setContentView(R.layout.activity_landing);
         ParseUser currentUser = ParseUser.getCurrentUser();
         String [] values;
-        if (currentUser!=null) {
+        if(currentUser!=null) {
             if (currentUser.get("Type").equals("Customer")) {
-                values = new String[]{"User Profile", "History", "Coupon Page", "Map Location", "Log Out"};
-            }
-            else if (currentUser.get("Type").equals("Bar")) {
-                values=new String[]{"Bar Profile", "History", "Log out"};
-            }
-            else {
+                values = new String[]{"User Profile", "History", "Map Location", "Log Out"};
+            } else if (currentUser.get("Type").equals("Bar")) {
+                values = new String[]{"Bar Profile", "History", "Sell Drink", "Create Drink", "List Drinks", "Log Out"};
+            } else {
                 values = new String[0];
-                Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
+                IntentHandler.GoToActivity(this, LoginActivity.class);
             }
         }
         else {
             values = new String[0];
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+            IntentHandler.GoToActivity(this, LoginActivity.class);
         }
         ArrayAdapter<String> adapter;
         adapter = new ArrayAdapter<String>(this,
@@ -49,6 +45,7 @@ public class LandingActivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
+<<<<<<< HEAD
                 System.out.println(position);
                 String item = (String) parent.getAdapter().getItem(position);
                 System.out.println(item);
@@ -60,6 +57,31 @@ public class LandingActivity extends Activity {
                 if (item.equals("User Profile")) {
                     Intent intent = new Intent(view.getContext(), UserProfileActivity.class);
                     startActivity(intent);
+=======
+                String item = (String)parent.getAdapter().getItem(position);
+
+                switch(item){
+                    case "Log Out": ParseUser.logOut();
+                        IntentHandler.GoToActivity(view, LoginActivity.class);
+                        break;
+                    case "User Profile": IntentHandler.GoToActivity(view, UserProfileActivity.class);
+                        break;
+                    case "Map Location":
+                        IntentHandler.GoToActivity(view, WebMapsActivity.class);
+                        break;
+                    case "Sell Drink":
+                        IntentHandler.GoToActivity(view, SendingDrinksActivity.class);
+                        break;
+                    case "Create Drink":
+                        IntentHandler.GoToActivity(view, CreateDrinksActivity.class);
+                        break;
+                    case "List Drinks":
+                        IntentHandler.GoToActivity(view, DrinkListActivity.class);
+                        break;
+                    default:
+                        break;
+
+>>>>>>> 569e2f054579b69898eef9094819b50b8fb1064a
                 }
 
             }
