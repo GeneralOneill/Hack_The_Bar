@@ -92,6 +92,9 @@ public class LandingActivity extends Activity {
                     case "List Drinks":
                         IntentHandler.GoToActivity(view, DrinkListActivity.class);
                         break;
+                    case "History":
+                        IntentHandler.GoToActivity(view, HistoryActivity.class);
+                        break;
                     default:
                         break;
 =======

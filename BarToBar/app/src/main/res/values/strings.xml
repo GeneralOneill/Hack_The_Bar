@@ -14,4 +14,5 @@
     <string name="title_activity_sending_drinks">SendingDrinksActivity</string>
     <string name="title_activity_create_drinks">CreateDrinksActivity</string>
     <string name="title_activity_drink_list">DrinkListActivity</string>
+    <string name="title_activity_history">HistoryActivity</string>
 </resources>
