@@ -1,13 +1,11 @@
-package google.mapsapi;
+package com.b2b;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.b2b.LoginActivity;
 import com.parse.ParseUser;
 
 public class UserProfileActivity extends Activity {
