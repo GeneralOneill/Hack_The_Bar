@@ -50,7 +50,7 @@ public class LandingActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
                 System.out.println(position);
-                String item = (String)parent.getAdapter().getItem(position);
+                String item = (String) parent.getAdapter().getItem(position);
                 System.out.println(item);
                 if (item.equals("Log Out")) {
                     ParseUser.logOut();
@@ -58,11 +58,14 @@ public class LandingActivity extends Activity {
                     startActivity(intent);
                 }
                 if (item.equals("User Profile")) {
-                    Intent intent= new Intent(view.getContext(), UserProfileActivity.class);
+                    Intent intent = new Intent(view.getContext(), UserProfileActivity.class);
                     startActivity(intent);
                 }
+
             }
         });
     }
 
 }
+
+
