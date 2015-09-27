@@ -9,7 +9,6 @@ public class Bar {
     private String barName;
     private String password;
     private String address;
-    private int id;
 
     public Bar(String myEmail, String myBarName, String myPass, String newAddress)
     {
