@@ -31,17 +31,18 @@ public class RegisterBar extends Activity {
                 String barAddress = ((EditText)findViewById(R.id.reg_bar_address)).getText().toString();
                 String barPass = ((EditText)findViewById(R.id.reg_bar_password)).getText().toString();
                 ParseUser barUser = new ParseUser();
-                barUser.setUsername(barName);
+                barUser.setUsername(barEmail);
                 barUser.setPassword(barPass);
                 barUser.setEmail(barEmail);
                 barUser.put("Address", barAddress);
                 barUser.put("Type", "Bar");
+                barUser.put("Bar Name", barName);
                 barUser.put("Points", 0);
                 barUser.signUpInBackground(new SignUpCallback() {
                     @Override
                     public void done(ParseException e) {
                         if (e == null) {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                            Intent intent = new Intent(v.getContext(), LandingActivity.class);
                             v.getContext().startActivity(intent);
                         }
                     }

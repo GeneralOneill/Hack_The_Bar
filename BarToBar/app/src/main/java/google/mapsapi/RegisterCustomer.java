@@ -33,16 +33,17 @@ public class RegisterCustomer extends Activity {
                 String password = ((EditText) findViewById(R.id.reg_password)).getText().toString();
                 User newUser = new User(name, email, password);
                 ParseUser user = new ParseUser();
-                user.setUsername(name);
+                user.setUsername(email);
                 user.setEmail(email);
                 user.setPassword(password);
                 user.put("Points", 0);
+                user.put("Full Name", name);
                 user.put("Type", "Customer");
                 user.signUpInBackground(new SignUpCallback() {
                     @Override
                     public void done(ParseException e) {
                         if (e == null) {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                            Intent intent = new Intent(v.getContext(), LandingActivity.class);
                             v.getContext().startActivity(intent);
                         }
                         else
