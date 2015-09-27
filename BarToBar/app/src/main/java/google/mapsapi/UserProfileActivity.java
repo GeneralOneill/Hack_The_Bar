@@ -18,9 +18,9 @@ public class UserProfileActivity extends Activity {
         setContentView(R.layout.activity_user_profile);
         TextView userEmail = (TextView)findViewById(R.id.user_profile_email);
         ParseUser currentUser = ParseUser.getCurrentUser();
-        if(currentUser!=null)
+        if (currentUser != null)
             userEmail.setText(currentUser.getEmail());
-        else{
+        else {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }

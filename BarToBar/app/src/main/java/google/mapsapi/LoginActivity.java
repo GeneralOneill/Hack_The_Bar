@@ -31,7 +31,7 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        if(ParseUser.getCurrentUser()!= null){
+        if (ParseUser.getCurrentUser()!= null) {
             Intent intent = new Intent(this, LandingActivity.class);
             startActivity(intent);
         }
