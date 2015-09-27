@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="wrap_content"
-    android:layout_margin="15pxhding">
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/list_image"
         android:layout_marginLeft="4px"
-        android:layout_marginRight="10px"
-        android:layout_marginTop="20px"
-        android:layout_marginBottom="20px"/>
+        android:layout_marginRight="10px" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/label"
-        android:layout_marginBottom="20px"
-        android:layout_marginTop="20px"
-        android:textSize="50px" />
+        android:textSize="60px" />
 
 </LinearLayout>

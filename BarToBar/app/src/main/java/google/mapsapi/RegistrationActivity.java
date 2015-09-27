@@ -23,5 +23,13 @@ public class RegistrationActivity extends Activity {
                 v.getContext().startActivity(intent);
             }
         });
+        Button reg_bar = (Button)findViewById(R.id.bar_reg_btn);
+        reg_bar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), RegisterBar.class);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 }
