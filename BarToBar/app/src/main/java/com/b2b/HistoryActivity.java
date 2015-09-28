@@ -1,4 +1,4 @@
-package google.mapsapi;
+package com.b2b;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package google.mapsapi;
+package com.b2b;
 
 import android.content.Context;
 import android.content.Intent;

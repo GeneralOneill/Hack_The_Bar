@@ -1,17 +1,14 @@
-package google.mapsapi;
+package com.b2b;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.parse.ParseObject;
 
-public class DrinkListActivity extends Activity {
+public class CreateDrinksActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +24,7 @@ public class DrinkListActivity extends Activity {
                 ParseObject drink = new ParseObject("Drink");
                 drink.put("Name", drinkName);
                 drink.put("BarEmail", barEmail);
-                drink.put("Price", Integer.parseInt(price));
+                drink.put("Price", Float.parseFloat(price));
                 drink.saveInBackground();
                 IntentHandler.GoToActivity(v, SendingDrinksActivity.class);
             }
